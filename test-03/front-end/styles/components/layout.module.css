@@ -1,0 +1,8 @@
+/* components/layout/layout.module.css */
+.layout {
+  @apply flex flex-col min-h-screen;
+}
+
+.main {
+  @apply flex-grow relative z-0; /* Ensure main content has a lower z-index */
+}

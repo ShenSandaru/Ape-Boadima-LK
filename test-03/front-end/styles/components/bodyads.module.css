@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures the container takes up at least the full height of the viewport */
+}
+
+.section {
+    margin-top: auto; /* This pushes the section to the bottom */
+    margin-bottom: 50%; /* This adds some space between the section and the footer */  
+    
+}
