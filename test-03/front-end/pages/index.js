@@ -2,14 +2,13 @@
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import styles from '../styles/components/card.module.css';
-import FeaturedAds from '../components/layout/Bodyads';
+import FeaturedAds from '../components/layout/FeatureAds'; // Import the FeaturedAds component
 
 export default function Home() {
   return (
     <Layout>
       <div className="container mx-auto px-4">
         <Head>
-          
           <title>Ad Posting Site</title>
           <meta name="description" content="Post and find ads easily" />
           <link rel="icon" href="/favicon.ico" />
@@ -45,7 +44,6 @@ export default function Home() {
               <p>Learn about our platform.</p>
             </div>
           </div>
-         
         </main>
         {/* Include the FeaturedAds component */}
         <FeaturedAds />
