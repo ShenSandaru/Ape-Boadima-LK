@@ -1,0 +1,18 @@
+# Compiled output
+dist
+tmp
+out-tsc
+bazel-out
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Dotenv environment variables file
+.env
+.env.*
+
+# System files
+.DS_Store
+Thumbs.db
