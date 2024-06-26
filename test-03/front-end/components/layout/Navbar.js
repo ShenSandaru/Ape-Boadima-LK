@@ -59,8 +59,8 @@ const Navbar = () => {
             </div>
             <div className={styles.authButtons}>
               <div className={styles.authButtonsContainer}>
-                <Link href="/login" className={styles.navButton}>Login</Link>
-                <Link href="/signup" className={`${styles.navButton} ${styles.signUpButton}`}>Sign Up</Link>
+                <Link href="/user/login" className={styles.navButton}>Login</Link>
+                <Link href="/user/signup" className={`${styles.navButton} ${styles.signUpButton}`}>Sign Up</Link>
               </div>
             </div>
             <div className={styles.mobileMenuButton}>
@@ -110,8 +110,8 @@ const Navbar = () => {
           </div>
           <div className={styles.sideMenuAuthButtons}>
             <div className={styles.sideMenuAuthButtonsContainer}>
-              <Link href="/login" className={styles.sideMenuNavButton}>Login</Link>
-              <Link href="/signup" className={`${styles.sideMenuNavButton} ${styles.sideMenuSignUpButton}`}>Sign Up</Link>
+              <Link href="/user/login" className={styles.sideMenuNavButton}>Login</Link>
+              <Link href="/user/signup" className={`${styles.sideMenuNavButton} ${styles.sideMenuSignUpButton}`}>Sign Up</Link>
             </div>
           </div>
         </div>
