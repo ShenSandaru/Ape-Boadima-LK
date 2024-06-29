@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import Layout from '../components/layout/Layout';
 import styles from '../styles/pages/ads.module.css';
 import adsData from '../data/adsData'; // Import the ads data
 
@@ -85,7 +84,7 @@ const AdsPage = () => {
   };
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Browse Ads</title>
         <meta name="description" content="Browse the latest ads" />
@@ -113,7 +112,7 @@ const AdsPage = () => {
         {renderPaginationButtons()}
         <p className={styles.pageInfo}>Page {currentPage} of {totalPages}</p>
       </div>
-    </Layout>
+    </>
   );
 };
 
