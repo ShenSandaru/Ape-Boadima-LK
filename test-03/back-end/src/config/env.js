@@ -1,0 +1,1 @@
+MONGODB_URI=mongodb+srv://new-user-test-01:VSVwtpUNLTLY5Ukh@cluster-0.4mpnjv9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-0

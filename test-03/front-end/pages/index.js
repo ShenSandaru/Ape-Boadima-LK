@@ -6,7 +6,7 @@ import FeaturedAds from '../components/layout/FeatureAds'; // Import the Feature
 
 export default function Home() {
   return (
-    <Layout>
+    
       <div className="container mx-auto px-4">
         <Head>
           <title>Ad Posting Site</title>
@@ -48,6 +48,6 @@ export default function Home() {
         {/* Include the FeaturedAds component */}
         <FeaturedAds />
       </div>
-    </Layout>
+    
   );
 }
