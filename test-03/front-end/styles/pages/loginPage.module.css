@@ -1,0 +1,67 @@
+.container {
+  @apply min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8;
+}
+
+.formContainer {
+  @apply mt-8 sm:mx-auto sm:w-full sm:max-w-md;
+}
+
+.formCard {
+  @apply bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10;
+}
+
+.title {
+  @apply mt-6 text-center text-3xl font-extrabold text-gray-900;
+}
+
+.form {
+  @apply space-y-6;
+}
+
+.formGroup {
+  @apply mt-1;
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-800;
+}
+
+.input {
+  @apply appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+}
+
+.button {
+  @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200;
+}
+
+.errorMessage {
+  @apply bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4;
+}
+
+.divider {
+  @apply mt-6 relative;
+}
+
+.dividerLine {
+  @apply absolute inset-0 flex items-center;
+}
+
+.dividerLineInner {
+  @apply w-full border-t border-gray-300;
+}
+
+.dividerText {
+  @apply relative flex justify-center text-sm;
+}
+
+.dividerTextInner {
+  @apply px-2 bg-white text-gray-500;
+}
+
+.signupLink {
+  @apply mt-6;
+}
+
+.signupButton {
+  @apply w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-gray-50 transition-colors duration-200;
+}

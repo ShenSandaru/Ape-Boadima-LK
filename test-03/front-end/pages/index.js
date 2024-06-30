@@ -4,6 +4,7 @@ import Layout from '../components/layout/Layout';
 import styles from '../styles/components/card.module.css';
 import FeaturedAds from '../components/layout/FeatureAds'; // Import the FeaturedAds component
 
+
 export default function Home() {
   return (
     

@@ -15,7 +15,6 @@ const RegistrationForm = ({ onError }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(`Input changed: ${name} = ${value}`);
     setFormData(prevState => ({
       ...prevState,
       [name]: value
@@ -47,7 +46,6 @@ const RegistrationForm = ({ onError }) => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      // Submit the form
       console.log('Form submitted', formData);
       // Here you would typically send the data to your backend
     } else {
@@ -61,7 +59,7 @@ const RegistrationForm = ({ onError }) => {
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.formGroup}>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username" className={styles.label}>Username</label>
         <input
           type="text"
           id="username"
@@ -73,7 +71,7 @@ const RegistrationForm = ({ onError }) => {
         {errors.username && <p className={styles.error}>{errors.username}</p>}
       </div>
       <div className={styles.formGroup}>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email" className={styles.label}>Email</label>
         <input
           type="email"
           id="email"
@@ -85,7 +83,7 @@ const RegistrationForm = ({ onError }) => {
         {errors.email && <p className={styles.error}>{errors.email}</p>}
       </div>
       <div className={styles.formGroup}>
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password" className={styles.label}>Password</label>
         <input
           type="password"
           id="password"
@@ -97,7 +95,7 @@ const RegistrationForm = ({ onError }) => {
         {errors.password && <p className={styles.error}>{errors.password}</p>}
       </div>
       <div className={styles.formGroup}>
-        <label htmlFor="confirmPassword">Confirm Password</label>
+        <label htmlFor="confirmPassword" className={styles.label}>Confirm Password</label>
         <input
           type="password"
           id="confirmPassword"
