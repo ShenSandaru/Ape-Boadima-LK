@@ -1,25 +1,48 @@
 // pages/user/signup.js
+import { useState } from 'react';
 import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
 import RegistrationForm from '../../components/user/RegistraionForm';
 import styles from '../../styles/pages/signup.module.css';
+import Link from 'next/link';
 
 export default function Signup() {
+  const [error, setError] = useState('');
+
   const handleRegistrationError = (error) => {
     console.error('Registration error:', error);
-    // You can add more error handling here, like showing a notification to the user
+    setError(error.message || 'An error occurred during registration');
   };
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Sign Up - AdPost</title>
         <meta name="description" content="Create an account on AdPost" />
       </Head>
       <div className={styles.container}>
-        <h1 className={styles.title}>Create an Account</h1>
-        <RegistrationForm onError={handleRegistrationError} />
+        <div className={styles.formContainer}>
+          <div className={styles.formCard}>
+            <h1 className={styles.title}>Create an Account</h1>
+            {error && <div className={styles.errorMessage} role="alert">{error}</div>}
+            <RegistrationForm onError={handleRegistrationError} />
+            <div className={styles.divider}>
+              <div className={styles.dividerLine}>
+                <div className={styles.dividerLineInner}></div>
+              </div>
+              <div className={styles.dividerText}>
+                <span className={styles.dividerTextInner}>
+                  Already have an account?
+                </span>
+              </div>
+            </div>
+            <div className={styles.loginLink}>
+              <Link href="/user/login" className={styles.loginButton}>
+                Log in
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-    </Layout>
+    </>
   );
 }
