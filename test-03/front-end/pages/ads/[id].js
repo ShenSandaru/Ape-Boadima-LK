@@ -2,9 +2,9 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from 'next/image';
-import Layout from '../../components/layout/Layout';
+import SimpleLayout from '../../components/layout/SimpleLayout';
 import styles from '../../styles/pages/adDetails.module.css';
-import adsData from '../../data/adsData'; // Import the ads data
+import adsData from '../../data/adsData';
 
 const AdDetailsPage = () => {
   const router = useRouter();
@@ -16,7 +16,7 @@ const AdDetailsPage = () => {
   }
 
   return (
-    <Layout>
+    <SimpleLayout>
       <Head>
         <title>{ad.title}</title>
         <meta name="description" content={ad.description} />
@@ -27,7 +27,7 @@ const AdDetailsPage = () => {
         <p className={styles.description}>{ad.description}</p>
         <p className={styles.price}>{ad.price}</p>
       </div>
-    </Layout>
+    </SimpleLayout>
   );
 };
 
