@@ -6,3 +6,9 @@
 .main {
   @apply flex-grow relative z-0; /* Ensure main content has a lower z-index */
 }
+
+/* styles/components/layout.module.css */
+.layout {
+  background-color: #F5F5F5;
+  min-height: 100vh; /* Ensure it covers the full height */
+}

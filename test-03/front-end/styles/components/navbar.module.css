@@ -1,7 +1,7 @@
 .navbar {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: fixed;
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgb(7, 14, 76);
+  position:sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -31,7 +31,7 @@
 }
 
 .navLink {
-  color: #333;
+  color: #FFFFFF;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
