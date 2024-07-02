@@ -1,39 +1,136 @@
 /* styles/components/featuredAds.module.css */
 .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: rgb(37 99 235);
+}
+
+.adsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.adCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.adCard:hover {
+  transform: translateY(-5px);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%; /* 3:2 aspect ratio */
+}
+
+.adImage {
+  border-radius: 8px 8px 0 0;
+}
+
+.adContent {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.adTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.adDescription {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  flex-grow: 1;
+}
+
+.adPrice {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.adLocation {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.adDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.adDetail {
+  font-size: 0.8rem;
+  color: #4a5568;
+}
+
+.adAmenities {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.adAvailable {
+  font-size: 0.8rem;
+  color: #48bb78;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
   }
-  
+
   .title {
-    @apply text-3xl font-bold text-center mb-8;
+    font-size: 1.5rem;
   }
-  
+
   .adsGrid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
   }
-  
-  .adCard {
-    @apply bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .adCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
-  }
-  
-  .adImage {
-    @apply w-full h-48 object-cover;
-  }
-  
+
   .adTitle {
-    @apply text-xl font-semibold p-4;
+    font-size: 1.1rem;
   }
-  
+
   .adDescription {
-    @apply text-gray-700 p-4;
+    font-size: 0.8rem;
   }
-  
+
   .adPrice {
-    @apply text-blue-500 font-bold p-4;
+    font-size: 1rem;
   }
-  
+
+  .adLocation,
+  .adDetail,
+  .adAmenities,
+  .adAvailable {
+    font-size: 0.75rem;
+  }
+}

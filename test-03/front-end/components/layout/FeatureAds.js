@@ -1,29 +1,43 @@
 // components/layout/FeaturedAds.js
 import Link from 'next/link';
 import Image from 'next/image';
-import adsData from '../../data/adsData'; // Import the ads data
+import { dummyRentalHouses } from '../../data/dummyRentalHouses';
 import styles from '../../styles/components/featuredAds.module.css';
 
-const featuredAds = adsData.slice(0, 5); // Display the first 5 ads as featured ads
-
 const FeaturedAds = () => {
+  const featuredHouses = dummyRentalHouses.slice(0, 5);
+
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Featured Ads</h2>
+      <h2 className={styles.title}>Featured Rental Houses</h2>
       <div className={styles.adsGrid}>
-        {featuredAds.map((ad) => (
-          <Link key={ad.id} href={`/ads/${ad.id}`}>
-            <div className={styles.adCard}>
+        {featuredHouses.map((house) => (
+          <Link key={house.id} href={`/rentals/${house.id}`} className={styles.adCard}>
+            <div className={styles.imageWrapper}>
               <Image
-                src={ad.image}
-                alt={ad.title}
-                width={300}
-                height={200}
+                src={house.image}
+                alt={house.title}
+                layout="fill"
+                objectFit="cover"
                 className={styles.adImage}
               />
-              <h3 className={styles.adTitle}>{ad.title}</h3>
-              <p className={styles.adDescription}>{ad.description}</p>
-              <p className={styles.adPrice}>{ad.price}</p>
+            </div>
+            <div className={styles.adContent}>
+              <h3 className={styles.adTitle}>{house.title}</h3>
+              <p className={styles.adDescription}>{house.description}</p>
+              <p className={styles.adPrice}>${house.price} per month</p>
+              <p className={styles.adLocation}>{house.location}</p>
+              
+              <div className={styles.adDetails}>
+                <span className={styles.adDetail}>{house.bedrooms} bed</span>
+                <span className={styles.adDetail}>{house.bathrooms} bath</span>
+                <span className={styles.adDetail}>{house.area} sqft</span>
+              </div>
+              <p className={styles.adAmenities}>
+                {house.amenities.slice(0, 3).join(' • ')}
+                {house.amenities.length > 3 && ' • ...'}
+              </p>
+              <p className={styles.adAvailable}>Available: {house.available}</p>
             </div>
           </Link>
         ))}
