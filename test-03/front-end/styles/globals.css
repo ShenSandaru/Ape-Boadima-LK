@@ -33,3 +33,7 @@ body {
   }
 }
 
+main {
+  padding-top: 10%; /* Adjust this value to match your navbar height */
+}
+
