@@ -1,153 +1,213 @@
-/* components/layout/Navbar.module.css */
 .navbar {
-  @apply bg-white shadow-lg dark:bg-gray-800;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .container {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-}
-
-.navContent {
-  @apply flex items-center justify-between h-16;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  @apply flex-shrink-0;
+  display: flex;
+  align-items: center;
 }
 
 .logoImage {
-  @apply h-8 w-8;
+  height: auto;
 }
 
 .desktopMenu {
-  @apply hidden md:block;
-}
-
-.desktopLinks {
-  @apply ml-10 flex items-baseline space-x-4;
+  display: none;
 }
 
 .navLink {
-  @apply px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover, .navLink.active {
+  color: #007bff;
 }
 
 .authButtons {
-  @apply hidden md:block;
+  display: none;
 }
 
-.authButtonsContainer {
-  @apply ml-4 flex items-center md:ml-6;
+.loginButton, .signUpButton {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.navButton {
-  @apply ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700;
+.loginButton {
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.loginButton:hover {
+  background-color: #007bff;
+  color: #ffffff;
 }
 
 .signUpButton {
-  @apply bg-blue-500 text-white;
+  background-color: #007bff;
+  color: #ffffff;
+  margin-left: 1rem;
+}
+
+.signUpButton:hover {
+  background-color: #0056b3;
 }
 
 .mobileMenuButton {
-  @apply -mr-2 flex md:hidden;
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.mobileMenuIcon {
-  @apply inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white;
+.menuIcon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.menuIcon::before, .menuIcon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.menuIcon::before {
+  top: -8px;
+}
+
+.menuIcon::after {
+  bottom: -8px;
 }
 
 .mobileMenu {
-  @apply md:hidden;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.mobileLinks {
-  @apply px-2 pt-2 pb-3 space-y-1 sm:px-3;
+.mobileMenu.open {
+  display: flex;
+  flex-direction: column;
 }
 
 .mobileNavLink {
-  @apply block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  color: #007bff;
 }
 
 .mobileAuthButtons {
-  @apply pt-4 pb-3 border-t border-gray-700;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
-.mobileAuthButtonsContainer {
-  @apply flex items-center px-5;
+.mobileLoginButton, .mobileSignUpButton {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
-.mobileNavButton {
-  @apply block w-full px-3 py-2 rounded-md text-base font-medium text-center text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700;
+.mobileLoginButton {
+  color: #007bff;
+  border: 1px solid #007bff;
 }
 
-.active {
-  @apply text-blue-500 font-bold;
+.mobileLoginButton:hover {
+  background-color: #007bff;
+  color: #ffffff;
 }
 
-/* New styles for side menu */
-.sideMenu {
-  @apply fixed top-0 right-0 w-64 h-full bg-white dark:bg-gray-800 shadow-lg transform transition-transform duration-300 ease-in-out;
-  transform: translateX(100%);
+.mobileSignUpButton {
+  background-color: #007bff;
+  color: #ffffff;
 }
 
-.sideMenuOpen {
-  transform: translateX(0);
+.mobileSignUpButton:hover {
+  background-color: #0056b3;
 }
 
-.sideMenuContent {
-  @apply flex flex-col h-full;
+@media (min-width: 768px) {
+  .desktopMenu {
+    display: flex;
+  }
+
+  .authButtons {
+    display: flex;
+  }
+
+  .mobileMenuButton {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: none !important;
+  }
 }
 
-.closeButton {
-  @apply absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-white;
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sideMenuLinks {
-  @apply flex flex-col mt-8 px-4;
+.scrolled {
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.sideMenuNavLink {
-  @apply py-2 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700;
+.themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
 }
 
-.sideMenuAuthButtons {
-  @apply mt-auto mb-8 px-4;
+/* Add styles for light and dark themes */
+.light {
+  --bg-color: #ffffff;
+  --text-color: #333333;
 }
 
-.sideMenuAuthButtonsContainer {
-  @apply flex flex-col space-y-2;
-}
-
-.sideMenuNavButton {
-  @apply w-full py-2 px-4 text-center text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700;
-}
-
-.sideMenuSignUpButton {
-  @apply bg-blue-500 text-white hover:bg-blue-600;
-}
-
-/* Add these new styles to your existing navbar.module.css */
-
-.overlay {
-  @apply fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ease-in-out;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.overlayVisible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.sideMenu {
-  @apply fixed top-0 right-0 w-64 h-full bg-white dark:bg-gray-800 shadow-lg transform transition-transform duration-300 ease-in-out z-50;
-  transform: translateX(100%);
-}
-
-.sideMenuOpen {
-  transform: translateX(0);
-}
-
-/* Ensure the main content doesn't overlap */
-.mainContent {
-  @apply relative z-0;
+.dark {
+  --bg-color: #333333;
+  --text-color: #ffffff;
 }
