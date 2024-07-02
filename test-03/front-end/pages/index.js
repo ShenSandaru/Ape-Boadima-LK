@@ -15,11 +15,11 @@ export default function Home() {
 
       <main className="flex flex-col items-center justify-center min-h-screen py-8">
         <h1 className="text-5xl font-bold text-center mb-8">
-          Welcome to <span className="text-blue-500">ApeBodima.lk</span>
+          Welcome to <span className="text-blue-500">Boarding Perfection</span>
         </h1>
 
         <p className="text-lg text-center mb-12">
-          Find what you need or post your own ad today!
+         Discover your perfect home away from home with us
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
