@@ -12,26 +12,23 @@ const AboutPage = () => {
       <div className={styles.aboutContainer}>
         <h1 className={styles.title}>About Us</h1>
         <section className={styles.section}>
+       <h4> Welcome to our website, where we connect people with the perfect boarding houses to suit their needs. </h4></section>
+        <section className={styles.section}>
           <h2>Our Mission</h2>
           <p>
-            At [Your Company Name], we are dedicated to connecting people through a seamless online marketplace experience. Our goal is to create a trusted platform where users can easily buy, sell, and discover unique items within their local communities.
+          At apebodima.lk, our mission is to revolutionize the way people find and secure boarding accommodations. We believe that everyone deserves access to safe, comfortable, and affordable housing options, whether you're a student, a young professional, or simply in need of temporary lodging.
+         
           </p>
         </section>
         <section className={styles.section}>
           <h2>Our Story</h2>
           <p>
-            Founded in [year], [Your Company Name] began with a vision to revolutionize the way people engage in local commerce. What started as a small project has grown into a thriving online community, serving thousands of users across [your region/country].
-          </p>
+          We recognized the need for a user-friendly platform that could simplify the process of finding reliable boarding houses, and we've dedicated ourselves to creating a trusted network of properties across the country.
+       </p>
         </section>
+       
         <section className={styles.section}>
-          <h2>Our Values</h2>
-          <ul className={styles.valuesList}>
-            <li>Trust and Safety</li>
-            <li>Community Engagement</li>
-            <li>Sustainability</li>
-            <li>Innovation</li>
-          </ul>
-        </section>
+          <h4>Thank you for choosing our website to find your next boarding house. We look forward to helping you on your journey.</h4></section>
       </div>
     </>
   );

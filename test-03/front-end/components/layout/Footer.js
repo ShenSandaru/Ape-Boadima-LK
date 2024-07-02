@@ -12,7 +12,7 @@ const Footer = () => {
             <Link href="/privacy" className={styles.link}>Privacy Policy</Link>
           </div>
           <div className={styles.copyright}>
-            <p>Copyright © {new Date().getFullYear()} Your Company Name</p>
+            <p>apebodima.lk </p>
           </div>
         </div>
       </div>
