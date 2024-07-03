@@ -8,11 +8,11 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.links}>
-            <Link href="/terms" className={styles.link}>Terms & Conditions</Link>
+            <Link href="/terms" className={styles.link}>Terms & Conditions </Link>
             <Link href="/privacy" className={styles.link}>Privacy Policy</Link>
           </div>
           <div className={styles.copyright}>
-            <p>apebodima.lk </p>
+            <p><b>apebodima.lk </b></p>
           </div>
         </div>
       </div>

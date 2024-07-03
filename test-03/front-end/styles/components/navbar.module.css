@@ -1,13 +1,17 @@
 .navbar {
-  background-color: #000000;
-  box-shadow: 0 2px 4px rgb(7, 14, 76);
+  background-color:#00ABE4;
+  box-shadow: #00ABE4;
   position:sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
 }
+.logoname{
+  font-size: 50px;
+  margin-left: -50px;
 
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -19,11 +23,12 @@
 
 .logo {
   display: flex;
-  align-items: center;
+  margin-left: 0;
 }
 
 .logoImage {
   height: auto;
+  border-radius: 8px;
 }
 
 .desktopMenu {
@@ -39,6 +44,7 @@
 
 .navLink:hover, .navLink.active {
   color: #007bff;
+  color: #003e53;
 }
 
 .authButtons {
@@ -53,23 +59,24 @@
 }
 
 .loginButton {
-  color: #007bff;
+  color: #ffffff;
   border: 1px solid #007bff;
 }
 
 .loginButton:hover {
-  background-color: #007bff;
+  background-color: #DAB700;
   color: #ffffff;
 }
 
 .signUpButton {
-  background-color: #007bff;
+  background-color: #DAB700;
   color: #ffffff;
   margin-left: 1rem;
 }
 
 .signUpButton:hover {
-  background-color: #0056b3;
+  background-color: #ffffff;
+  color:#1C1A1A;
 }
 
 .mobileMenuButton {
@@ -148,17 +155,17 @@
 }
 
 .mobileLoginButton {
-  color: #007bff;
-  border: 1px solid #007bff;
+  color: #00ABE4;
+  border: 1px solid #00ABE4;
 }
 
 .mobileLoginButton:hover {
-  background-color: #007bff;
+  background-color: #00ABE4;
   color: #ffffff;
 }
 
 .mobileSignUpButton {
-  background-color: #007bff;
+  background-color: #00ABE4;
   color: #ffffff;
 }
 
