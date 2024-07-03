@@ -1,19 +1,31 @@
 // pages/ads.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/pages/ads.module.css';
 import { dummyRentalHouses } from '../data/dummyRentalHouses';
+import SearchBar from '../components/layout/SearchBar' // Import the SearchBar component
 
 const ADS_PER_PAGE = 10;
 const TOTAL_PAGES = 3;
 
 const AdsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [filteredAds, setFilteredAds] = useState(dummyRentalHouses);
 
-  const featuredAds = dummyRentalHouses.filter(ad => ad.featured);
-  const regularAds = dummyRentalHouses.filter(ad => !ad.featured);
+  const handleSearch = (searchTerm) => {
+    const filtered = dummyRentalHouses.filter(ad => 
+      ad.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      ad.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      ad.location.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredAds(filtered);
+    setCurrentPage(1);
+  };
+
+  const featuredAds = filteredAds.filter(ad => ad.featured);
+  const regularAds = filteredAds.filter(ad => !ad.featured);
   const paginatedAds = regularAds.slice(0, TOTAL_PAGES * ADS_PER_PAGE);
 
   const indexOfLastAd = currentPage * ADS_PER_PAGE;
@@ -23,9 +35,10 @@ const AdsPage = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const renderPaginationButtons = () => {
+    const pageCount = Math.ceil(paginatedAds.length / ADS_PER_PAGE);
     return (
       <div className={styles.pagination}>
-        {Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1).map((number) => (
+        {Array.from({ length: pageCount }, (_, i) => i + 1).map((number) => (
           <button
             key={number}
             onClick={() => paginate(number)}
@@ -76,6 +89,8 @@ const AdsPage = () => {
       <div className={styles.container}>
         <h1 className={styles.title}>Browse Rental Houses</h1>
         
+        <SearchBar onSearch={handleSearch} /> {/* Add the SearchBar component here */}
+        
         {featuredAds.length > 0 && (
           <section className={styles.featuredSection}>
             <h2 className={styles.featuredTitle}>Featured Rentals</h2>
@@ -101,7 +116,9 @@ const AdsPage = () => {
         </section>
 
         {renderPaginationButtons()}
-        <p className={styles.pageInfo}>Page {currentPage} of {TOTAL_PAGES}</p>
+        <p className={styles.pageInfo}>
+          Page {currentPage} of {Math.ceil(paginatedAds.length / ADS_PER_PAGE)}
+        </p>
       </div>
     </>
   );
