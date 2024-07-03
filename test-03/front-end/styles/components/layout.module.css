@@ -9,6 +9,6 @@
 
 /* styles/components/layout.module.css */
 .layout {
-  background-color: #ffffff;
+  background-color: rgb(215,220,235);
   min-height: 100vh; /* Ensure it covers the full height */
 }
