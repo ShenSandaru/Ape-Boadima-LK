@@ -14,7 +14,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
-  background-color: #010312;
+  background-color: #00ABE4;
 }
 .card {
   transition: transform 0.3s ease;
@@ -22,7 +22,7 @@
 .card:hover {
   transform: scale(1.05);
   transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(152, 201, 226, 0.238);
+    box-shadow:#00ABE4;
 }  
 
 .card {

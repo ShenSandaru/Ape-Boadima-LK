@@ -21,7 +21,7 @@
 }
 
 .highlight {
-  color: #0070f3;
+  color: #00ABE4;
 }
 
 .description {
@@ -54,8 +54,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #00ABE4;
+  border-color: #00ABE4;
 }
 
 .card h2 {
