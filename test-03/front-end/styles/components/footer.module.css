@@ -1,6 +1,6 @@
 /* styles/components/footer.module.css */
 .footer {
-    @apply bg-sky-600 text-white py-6 md:py-8;
+    @apply bg-slate-500 text-white py-6 md:py-8;
     color: #00ABE4;
   }
   

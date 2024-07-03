@@ -43,9 +43,7 @@ const Navbar = () => {
             className={styles.logoImage}
           />
         </Link>
-        <div className={styles.logoname}>
-          <p>apebodima.Lk</p>
-        </div>
+        
         <div className={styles.desktopMenu}>
           <Link href="/" className={`${styles.navLink} ${isActive('/') ? styles.active : ''}`}>Home</Link>
           <Link href="/ads" className={`${styles.navLink} ${isActive('/ads') ? styles.active : ''}`}>Browse Ads</Link>

@@ -1,5 +1,5 @@
 .navbar {
-  background-color:#00ABE4;
+  background-color:#64748b;
   box-shadow: #00ABE4;
   position:sticky;
   top: 0;
@@ -7,11 +7,9 @@
   right: 0;
   z-index: 1000;
 }
-.logoname{
-  font-size: 50px;
-  margin-left: -50px;
 
-}
+
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -44,7 +42,7 @@
 
 .navLink:hover, .navLink.active {
   color: #007bff;
-  color: #003e53;
+  color: #01080b;
 }
 
 .authButtons {
@@ -64,12 +62,12 @@
 }
 
 .loginButton:hover {
-  background-color: #DAB700;
+  background-color: #007bff;
   color: #ffffff;
 }
 
 .signUpButton {
-  background-color: #DAB700;
+  background-color: #007bff;
   color: #ffffff;
   margin-left: 1rem;
 }
