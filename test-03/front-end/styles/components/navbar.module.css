@@ -1,5 +1,5 @@
 .navbar {
-  background-color:#64748b;
+  background-color:#00ABE4;
   box-shadow: #00ABE4;
   position:sticky;
   top: 0;
@@ -7,7 +7,10 @@
   right: 0;
   z-index: 1000;
 }
-
+.logoname{
+  font-size: 50px;
+  margin-left:-50px;
+}
 
 
 .container {
