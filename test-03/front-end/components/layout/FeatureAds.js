@@ -25,7 +25,7 @@ const FeaturedAds = () => {
             <div className={styles.adContent}>
               <h3 className={styles.adTitle}>{house.title}</h3>
               <p className={styles.adDescription}>{house.description}</p>
-              <p className={styles.adPrice}>${house.price} per month</p>
+              <p className={styles.adPrice}>Rs. {house.price} per month</p>
               <p className={styles.adLocation}>{house.location}</p>
               
               <div className={styles.adDetails}>

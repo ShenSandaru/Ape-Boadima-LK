@@ -35,7 +35,7 @@ const RentalDetails = () => {
         />
       </div>
       <p className={styles.description}>{house.description}</p>
-      <p className={styles.price}>${house.price.toLocaleString()} per month</p>
+      <p className={styles.price}>Rs. {house.price.toLocaleString()} per month</p>
       <p className={styles.location}>{house.location}</p>
       <div className={styles.details}>
         <span>{house.bedrooms} bed</span>

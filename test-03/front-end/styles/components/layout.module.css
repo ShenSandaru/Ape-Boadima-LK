@@ -11,4 +11,5 @@
 .layout {
   background-color: rgb(215,220,235);
   min-height: 100vh; /* Ensure it covers the full height */
+  
 }
