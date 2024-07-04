@@ -15,7 +15,7 @@ export default function Home() {
 
       <main className="flex flex-col items-center justify-center min-h-screen py-8">
         <h1 className="text-5xl font-bold text-center mb-8 text-gray-800">
-          Welcome to <span className="text-blue-600">Boarding Perfection</span>
+        Apebodima<span className="text-blue-600">.</span>lk
         </h1>
 
         <p className="text-lg text-center mb-12 text-gray-600">

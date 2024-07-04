@@ -64,7 +64,7 @@ const AdsPage = () => {
       <div className={styles.adContent}>
         <h3 className={styles.adTitle}>{ad.title}</h3>
         <p className={styles.adDescription}>{ad.description}</p>
-        <p className={styles.adPrice}>Rs.{ad.price} per month</p>
+        <p className={styles.adPrice}>Rs. {ad.price} per month</p>
         <p className={styles.adLocation}>{ad.location}</p>
         <div className={styles.adDetails}>
           <span className={styles.adDetail}>{ad.bedrooms} bed</span>

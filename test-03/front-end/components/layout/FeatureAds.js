@@ -5,7 +5,7 @@ import { dummyRentalHouses } from '../../data/dummyRentalHouses';
 import styles from '../../styles/components/featuredAds.module.css';
 
 const FeaturedAds = () => {
-  const featuredHouses = dummyRentalHouses.slice(0, 5);
+  const featuredHouses = dummyRentalHouses.slice(0, 6);
 
   return (
     <div className={styles.container}>
@@ -25,7 +25,7 @@ const FeaturedAds = () => {
             <div className={styles.adContent}>
               <h3 className={styles.adTitle}>{house.title}</h3>
               <p className={styles.adDescription}>{house.description}</p>
-              <p className={styles.adPrice}>${house.price} per month</p>
+              <p className={styles.adPrice}>Rs. {house.price} per month</p>
               <p className={styles.adLocation}>{house.location}</p>
               
               <div className={styles.adDetails}>

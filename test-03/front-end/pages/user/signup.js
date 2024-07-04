@@ -22,6 +22,10 @@ export default function Signup() {
       <div className={styles.container}>
         <div className={styles.formContainer}>
           <div className={styles.formCard}>
+          <div className={styles.logoname}>
+            <p>Apebodima.lk</p>
+          </div>
+
             <h1 className={styles.title}>Create an Account</h1>
             {error && <div className={styles.errorMessage} role="alert">{error}</div>}
             <RegistrationForm onError={handleRegistrationError} />
