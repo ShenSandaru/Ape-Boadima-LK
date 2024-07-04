@@ -5,7 +5,7 @@ import { dummyRentalHouses } from '../../data/dummyRentalHouses';
 import styles from '../../styles/components/featuredAds.module.css';
 
 const FeaturedAds = () => {
-  const featuredHouses = dummyRentalHouses.slice(0, 5);
+  const featuredHouses = dummyRentalHouses.slice(0, 6);
 
   return (
     <div className={styles.container}>
