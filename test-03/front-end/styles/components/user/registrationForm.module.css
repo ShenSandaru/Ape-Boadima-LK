@@ -17,6 +17,40 @@
   
   .error {
     @apply text-red-500 text-sm mt-1;
+  }/* styles/components/user/RegistrationForm.module.css */
+.form {
+    @apply space-y-4;
+  }
+  
+  .formGroup {
+    @apply flex flex-col;
+  }
+  
+  .formGroup label {
+    @apply mb-1 text-sm font-medium text-gray-700;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  
+  .error {
+    @apply text-red-500 text-sm mt-1;
+  }
+  
+  .button {
+    @apply w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75;
+  }
+  
+  .loginLink {
+    @apply mt-4 text-center text-sm text-gray-600;
+  }
+  
+  .loginLink a {
+    @apply text-blue-600 hover:underline;
+  }
+  .container {
+    background-color: aqua;
   }
   
   .button {

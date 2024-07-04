@@ -75,6 +75,7 @@
 }
 
 .adTitle {
+  color: #000000db;
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -132,15 +133,15 @@
 .pageButton {
   padding: 0.5rem 1rem;
   margin: 0 0.25rem;
-  background-color: #f0f0f0;
+  background-color: #00abe45b;
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .activePage {
-  background-color: rgb(37 99 235);
-  color: white;
+  background-color: #00ABE4;
+  color: rgb(255, 255, 255);
 }
 
 .pageInfo {
