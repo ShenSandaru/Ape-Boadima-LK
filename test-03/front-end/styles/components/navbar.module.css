@@ -1,32 +1,41 @@
 .navbar {
-  background-color:#64748b;
-  box-shadow: #00ABE4;
-  position:sticky;
+  background-color: #00ABE4;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
   display: flex;
-  margin-left: 0;
+  align-items: center;
 }
 
 .logoImage {
   height: auto;
   border-radius: 8px;
+  max-width: 100%;
+  max-height: 40px;
+}
+
+.logoname {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 .desktopMenu {
@@ -36,13 +45,15 @@
 .navLink {
   color: #FFFFFF;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
+  padding: 0.5rem 1.0rem;
+  margin-inline: 0.1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 .navLink:hover, .navLink.active {
-  color: #007bff;
-  color: #01080b;
+  color: #00ABE4;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .authButtons {
@@ -53,28 +64,28 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 .loginButton {
-  color: #ffffff;
-  border: 1px solid #007bff;
+  color: #00ABE4;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
 }
 
 .loginButton:hover {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .signUpButton {
   background-color: #007bff;
-  color: #ffffff;
-  margin-left: 1rem;
+  color: #FFFFFF;
+  margin-left: 0.5rem;
 }
 
 .signUpButton:hover {
-  background-color: #ffffff;
-  color:#1C1A1A;
+  background-color: #0056b3;
 }
 
 .mobileMenuButton {
@@ -82,24 +93,21 @@
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0.5rem;
 }
 
-.menuIcon {
+.menuIcon, .menuIcon::before, .menuIcon::after {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background-color: #FFFFFF;
   position: relative;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .menuIcon::before, .menuIcon::after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #333;
-  transition: all 0.3s ease;
 }
 
 .menuIcon::before {
@@ -116,7 +124,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  background-color: #ffffff;
+  background-color: #00ABE4;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -127,14 +135,19 @@
 }
 
 .mobileNavLink {
-  color: #333;
+  color: #FFFFFF;
   text-decoration: none;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   transition: color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileNavLink:last-child {
+  border-bottom: none;
 }
 
 .mobileNavLink:hover {
-  color: #007bff;
+  color: #E6F7FF;
 }
 
 .mobileAuthButtons {
@@ -144,27 +157,28 @@
 }
 
 .mobileLoginButton, .mobileSignUpButton {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   border-radius: 4px;
   text-decoration: none;
   text-align: center;
   margin-bottom: 0.5rem;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 .mobileLoginButton {
   color: #00ABE4;
-  border: 1px solid #00ABE4;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
 }
 
 .mobileLoginButton:hover {
-  background-color: #00ABE4;
-  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .mobileSignUpButton {
-  background-color: #00ABE4;
-  color: #ffffff;
+  background-color: #007bff;
+  color: #FFFFFF;
 }
 
 .mobileSignUpButton:hover {
@@ -172,12 +186,22 @@
 }
 
 @media (min-width: 768px) {
+  .container {
+    padding: 0.75rem 1rem;
+  }
+
+  .logoname {
+    font-size: 1.75rem;
+  }
+
   .desktopMenu {
     display: flex;
+    align-items: center;
   }
 
   .authButtons {
     display: flex;
+    align-items: center;
   }
 
   .mobileMenuButton {
@@ -189,13 +213,23 @@
   }
 }
 
-.navbar {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+@media (max-width: 767px) {
+  .container {
+    justify-content: space-between;
+  }
+
+  .logoname {
+    font-size: 1.25rem;
+  }
+
+  .mobileMenuButton {
+    order: 1;
+  }
 }
 
 .scrolled {
-  background-color: var(--bg-color);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: rgba(0, 171, 228, 0.95);
+  backdrop-filter: blur(10px);
 }
 
 .themeToggle {
@@ -204,6 +238,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   margin-left: 1rem;
+  color: #FFFFFF;
 }
 
 /* Add styles for light and dark themes */
@@ -215,4 +250,39 @@
 .dark {
   --bg-color: #333333;
   --text-color: #ffffff;
+}
+
+/* Word Hover effect*/
+.logoname {
+  font-size: 2rem;
+  margin-left: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoname {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logoname:hover {
+  transform: scale(1.1);
+  color: #E6F7FF; /* Light blue color, you can adjust this */
+}
+
+/* Add this for an underline animation on hover */
+.logoname::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #E6F7FF;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.logoname:hover::after {
+  transform: scaleX(1);
 }

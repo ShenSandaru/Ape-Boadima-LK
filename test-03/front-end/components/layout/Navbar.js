@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useTheme } from '../../contexts/ThemeContext';
 import styles from '../../styles/components/navbar.module.css';
 
 const Navbar = () => {
@@ -21,11 +20,7 @@ const Navbar = () => {
   }, [router]);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -34,15 +29,20 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-          <Image
-            src="/tt-high-resolution-logo.jpeg"
-            alt="TT Logo"
-            width={60}
-            height={30}
-            className={styles.logoImage}
-          />
-        </Link>
+        <div className={styles.logoContainer}>
+          <Link href="/" className={styles.logo}>
+            <Image
+              src="/tt-high-resolution-logo.jpeg"
+              alt="TT Logo"
+              width={60}
+              height={30}
+              className={styles.logoImage}
+            />
+          </Link>
+          <div className={styles.logoname}>
+            <p>Apebodima.lk</p>
+          </div>
+        </div>
         
         <div className={styles.desktopMenu}>
           <Link href="/" className={`${styles.navLink} ${isActive('/') ? styles.active : ''}`}>Home</Link>
@@ -58,6 +58,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className={styles.mobileMenuButton}
+          aria-label="Toggle menu"
         >
           <span className={styles.menuIcon}></span>
         </button>
