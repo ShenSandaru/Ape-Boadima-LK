@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/pages/ads.module.css';
 import { dummyRentalHouses } from '../data/dummyRentalHouses';
-import SearchBar from '../components/layout/SearchBar' // Import the SearchBar component
+import SearchBar from '../components/layout/SearchBar'; // Import the SearchBar component
 
 const ADS_PER_PAGE = 10;
 const TOTAL_PAGES = 3;
@@ -16,9 +16,9 @@ const AdsPage = () => {
 
   const handleSearch = (searchTerm) => {
     const filtered = dummyRentalHouses.filter(ad => 
-      ad.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      ad.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      ad.location.toLowerCase().includes(searchTerm.toLowerCase())
+      (typeof ad.title === 'string' && ad.title.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      (typeof ad.description === 'string' && ad.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      (typeof ad.location === 'string' && ad.location.toLowerCase().includes(searchTerm.toLowerCase()))
     );
     setFilteredAds(filtered);
     setCurrentPage(1);
