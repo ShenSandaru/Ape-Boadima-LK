@@ -30,12 +30,21 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <div className={styles.logoContainer}>
+        <Link href="/" className={styles.logo}>
+        <Image
+          src="/logo.png"
+          alt='TT Logo'
+          width={80}
+          height={40}
+          className={styles.logoImage}
+          />
+          </Link>
           
           <div className={styles.logoname}>
-          <h1 className="text-4xl font-bold text-center mb-8 text-gray-400">
-            Apebodima<span className="text-blue-600">.</span>lk
+          <h1 className="text-4xl font-bold text-center mb-8 text-gray-50">
+            Apebodima<span className="text-gray-50">.</span>Lk
         </h1>
-          </div>
+        </div>
         </div>
         
         <div className={styles.desktopMenu}>

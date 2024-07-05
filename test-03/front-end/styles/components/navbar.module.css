@@ -125,7 +125,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  background-color: #64748b;
+  background-color: #ffffff;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -136,7 +136,7 @@
 }
 
 .mobileNavLink {
-  color: #FFFFFF;
+  color: #1B1919;
   text-decoration: none;
   padding: 0.75rem 0;
   transition: color 0.3s ease;
@@ -148,7 +148,7 @@
 }
 
 .mobileNavLink:hover {
-  color: #E6F7FF;
+  color: #000000;
 }
 
 .mobileAuthButtons {
@@ -170,7 +170,7 @@
 .mobileLoginButton {
   color: #00ABE4;
   background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  border: 1px solid hsl(0, 0%, 100%);
 }
 
 .mobileLoginButton:hover {
