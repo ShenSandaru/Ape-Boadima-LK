@@ -1,3 +1,4 @@
+
 .aboutContainer {
   max-width: 800px;
   margin: 0 auto;
@@ -39,6 +40,27 @@
   color: #555;
 }
 
+.flexSection {
+  display: flex;
+  align-items: center;
+}
+
+.imageContainer {
+  flex: 3.5;
+  margin-right: 20px;
+}
+
+.textContainer {
+  flex: 3.5;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: to match the container's rounded corners */
+}
+
 .valuesList {
   list-style-type: none;
   padding: 0;
@@ -55,6 +77,7 @@
 .valuesList li::before {
   content: '•';
   color: #007bff;
+  
   font-size: 1.8rem;
   position: absolute;
   left: 0;
@@ -74,12 +97,13 @@
   .section h2 {
     font-size: 1.8rem;
     margin-bottom: 1.2rem;
+   
   }
 
   .section h4 {
     font-size: 1.6rem;
     margin-bottom: 1.2rem;
-    color: #0070f3;
+    
   }
 
   .section p {
@@ -90,5 +114,16 @@
     font-size: 1.1rem;
     margin-bottom: 0.8rem;
   }
+
+  .flexSection {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
+
+
   
