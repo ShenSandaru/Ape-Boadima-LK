@@ -21,6 +21,10 @@ const AboutPage = () => {
           </p>
         </section>
         <section className={styles.section}>
+          <h2>Our Vision</h2>
+          <p>Right place at the Right time</p>
+        </section>
+        <section className={styles.section}>
           <h2>Our Story</h2>
           <p>
           We recognized the need for a user-friendly platform that could simplify the process of finding reliable boarding houses, and we've dedicated ourselves to creating a trusted network of properties across the country.
