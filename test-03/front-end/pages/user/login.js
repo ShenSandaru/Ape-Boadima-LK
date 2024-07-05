@@ -38,8 +38,9 @@ const LoginPage = () => {
       </Head>
       <div className={styles.container}>
         <div className={styles.formContainer}>
-          <h2 className={styles.title}>Sign in to your account</h2>
+          
           <div className={styles.formCard}>
+            <h2 className={styles.title}>Sign in to your account</h2>
             {error && (
               <div className={styles.errorMessage}>
                 <span>{error}</span>
