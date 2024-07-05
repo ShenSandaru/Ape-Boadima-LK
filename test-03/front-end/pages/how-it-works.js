@@ -5,16 +5,12 @@ import styles from '../styles/pages/HowItWorks.module.css';
 export default function HowItWorks() {
   const steps = [
     { title: "Create an Account", description: "Sign up for free and set up your profile to start using AdPost." },
-    { title: "Post Your Ad", description: "Create a detailed listing for your item or service with photos and description." },
-    { title: "Connect with Buyers", description: "Receive inquiries and communicate with potential buyers through our platform." },
-    { title: "Complete the Transaction", description: "Finalize the sale and arrange for payment and delivery or pickup." }
+    { title: "submit an Ad", description: " After creating an account, users can navigate to the Ad Post section, fill out the provided form, and submit their ad." },
+    { title: "Ad approval", description: "Our team will review the submitted ad and, once approved, we will post it on our site, informing the user about the status via email." },
+    { title: "Update your ad", description: "Ad owners can update their posted ads at any time to keep the information current and relevant" }
   ];
 
-  const faqs = [
-    { question: "Is it free to post an ad?", answer: "Yes, basic ad posting is free. We also offer premium options for better visibility." },
-    { question: "How long will my ad stay active?", answer: "Ads typically remain active for 30 days, but you can renew or remove them at any time." },
-    { question: "Is my personal information safe?", answer: "We take privacy seriously and use industry-standard security measures to protect your data." }
-  ];
+ 
 
   return (
     <div className={styles.container}>
@@ -37,15 +33,6 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <section className={styles.faq}>
-          <h2>Frequently Asked Questions</h2>
-          {faqs.map((faq, index) => (
-            <div key={index} className={styles.faqItem}>
-              <h3>{faq.question}</h3>
-              <p>{faq.answer}</p>
-            </div>
-          ))}
-        </section>
       </main>
     </div>
   );
