@@ -8,7 +8,7 @@ export const dummyRentalHouses = [
       location: "Katubedda",
       beds: 12,
       bathrooms: 3,
-      area: 600,
+      contact: "0712345679",
       amenities: [ "fans", "parking","garden"],
       available: "2024-07-01",
       image: "/image1.png"
@@ -20,8 +20,8 @@ export const dummyRentalHouses = [
       price: 22000,
       location: "Nugegoda",
       beds: 4,
-      bathrooms: 1,
-      area: 110,
+      bathrooms: 2,
+      contact: "0712345678",
       amenities: ["cctv camera", "vehicle parking", "air condition", "food"],
       available: "2024-07-15",
       image: "/image2.png"
@@ -34,7 +34,7 @@ export const dummyRentalHouses = [
       location: "Katubedda",
       beds: 4,
       bathrooms: 1,
-      area: 120,
+      contact: "0712345678",
       amenities: ["vehicle parking", "air condition", "food"],
       available: "2024-07-18",
       image: "/image3.png"
@@ -47,7 +47,7 @@ export const dummyRentalHouses = [
       location: "Katubedda",
       beds: 4,
       bathrooms: 1,
-      area: 100,
+      contact: "0712345678",
       amenities: [ "Fans", "Garden","24/7 Security"],
       available: "2024-05-30",
       image: "/image2.png"
@@ -60,7 +60,7 @@ export const dummyRentalHouses = [
       location: "Kelaniya",
       beds: 4,
       bathrooms: 1,
-      area: 115,
+      contact: "0712345678",
       amenities: ["24/7 Security", "Fans", "Garden","parking for bike only."],
       available: "2024-06-10",
       image: "/image3.png"
@@ -73,7 +73,7 @@ export const dummyRentalHouses = [
       location: "Katubedda",
       beds: 14,
       bathrooms: 3,
-      area: 900,
+      contact: "0712345678",
       amenities: ["Garden", "Parking for Bike ","Fans","cctv camera"],
       available: "2024-06-22",
       image: "/image1.png"
@@ -86,7 +86,7 @@ export const dummyRentalHouses = [
       location: "Katubedda",
       beds: 5,
       bathrooms: 1,
-      area: 130,
+      contact: "0712345678",
       amenities: ["vehicle parking", "air condition", "food"],
       available: "2024-07-11",
       image: "/image3.png"
@@ -99,7 +99,7 @@ export const dummyRentalHouses = [
       location: "Katubedda",
       beds: 4,
       bathrooms: 1,
-      area: 100,
+      contact: "0712345678",
       amenities: [ "Fans", "Garden","24/7 Security","wifi"],
       available: "2024-07-03",
       image: "/image2.png"
@@ -112,7 +112,7 @@ export const dummyRentalHouses = [
       location: "Kelaniya",
       beds: 4,
       bathrooms: 1,
-      area: 115,
+      contact: "0712345678",
       amenities: ["24/7 Security", "Fans", "Garden","parking for bike only."],
       available: "2024-06-19",
       image: "/image3.png"
@@ -125,7 +125,7 @@ export const dummyRentalHouses = [
       location: "Katubedda",
       beds: 14,
       bathrooms: 3,
-      area: 900,
+      contact: "0712345678",
       amenities: ["Garden", "Parking for Bike ","Fans","cctv camera"],
       available: "2024-07-22",
       image: "/image1.png"

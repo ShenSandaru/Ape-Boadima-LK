@@ -67,15 +67,16 @@ const AdsPage = () => {
         <p className={styles.adPrice}>Rs. {ad.price} per month</p>
         <p className={styles.adLocation}>{ad.location}</p>
         <div className={styles.adDetails}>
-          <span className={styles.adDetail}>{ad.bedrooms} bed</span>
-          <span className={styles.adDetail}>{ad.bathrooms} bath</span>
-          <span className={styles.adDetail}>{ad.area} sqft</span>
+          <span className={styles.adDetail}>{ad.bedrooms} beds</span>
+          <span className={styles.adDetail}>{ad.bathrooms} bath rooms</span>
+          
         </div>
         <p className={styles.adAmenities}>
           {ad.amenities.slice(0, 3).join(' • ')}
           {ad.amenities.length > 3 && ' • ...'}
         </p>
         <p className={styles.adAvailable}>Available: {ad.available}</p>
+        <p className={styles.adcontact}>ContactNo: {ad.contact}</p>
       </div>
     </div>
   );

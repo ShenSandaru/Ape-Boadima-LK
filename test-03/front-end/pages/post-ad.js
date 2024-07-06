@@ -176,19 +176,7 @@ const PostAdPage = () => {
                 className={`${styles.input} w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200`}
               />
             </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="area" className="block text-sm font-medium text-gray-700 mb-2">Area (sq ft)</label>
-              <input
-                type="number"
-                id="area"
-                name="area"
-                value={adData.area}
-                onChange={handleChange}
-                required
-                min="0"
-                className={`${styles.input} w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200`}
-              />
-            </div>
+          
           </div>
           <div className={styles.formGroup}>
             <label className="block text-sm font-medium text-gray-700 mb-2">Amenities</label>
@@ -224,9 +212,9 @@ const PostAdPage = () => {
             <label htmlFor="contactInfo" className="block text-sm font-medium text-gray-700 mb-2">Contact Information</label>
             <input
               type="text"
-              id="contactInfo"
-              name="contactInfo"
-              value={adData.contactInfo}
+              id="contact"
+              name="contact"
+              value={adData.contact}
               onChange={handleChange}
               required
               className={`${styles.input} w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200`}
