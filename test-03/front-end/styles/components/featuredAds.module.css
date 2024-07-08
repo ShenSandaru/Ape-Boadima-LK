@@ -101,6 +101,11 @@
   color: #48bb78;
   font-weight: bold;
 }
+.adContactNo {
+  font-size: 0.8rem;
+  color: #48bb78;
+  font-weight: bold;
+}
 
 @media (max-width: 768px) {
   .container {
@@ -133,6 +138,9 @@
   .adDetail,
   .adAmenities,
   .adAvailable {
+    font-size: 0.75rem;
+  }
+  .adContactNo {
     font-size: 0.75rem;
   }
 }

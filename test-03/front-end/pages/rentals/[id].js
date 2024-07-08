@@ -1,4 +1,3 @@
-// pages/rentals/[id].js
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -38,9 +37,9 @@ const RentalDetails = () => {
       <p className={styles.price}>Rs. {house.price.toLocaleString()} per month</p>
       <p className={styles.location}>{house.location}</p>
       <div className={styles.details}>
-        <span>{house.bedrooms} bed</span>
-        <span>{house.bathrooms} bath</span>
-        <span>{house.area.toLocaleString()} sqft</span>
+        <span>{house.bedrooms} beds</span>
+        <span>{house.bathrooms} bath rooms</span>
+       
       </div>
       <p className={styles.amenities}>
         <strong>Amenities:</strong> {house.amenities.join(', ')}
@@ -48,8 +47,11 @@ const RentalDetails = () => {
       <p className={styles.available}>
         <strong>Available:</strong> {new Date(house.available).toLocaleDateString()}
       </p>
+      <p className={styles.contact }>
+        <strong>ContactNo:</strong> {house.contact}
+      </p>
     </div>
   );
 };
-
 export default RentalDetails;
+

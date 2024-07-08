@@ -91,9 +91,7 @@
   content: '🚿';
 }
 
-.details span:nth-child(3)::before {
-  content: '📏';
-}
+
 
 .amenities {
   font-size: 1.1rem;
@@ -106,6 +104,16 @@
 }
 
 .available {
+  font-size: 1.1rem;
+  color: #48bb78;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f0fff4;
+  border-radius: 4px;
+  display: inline-block;
+}
+.contact {
   font-size: 1.1rem;
   color: #48bb78;
   font-weight: bold;

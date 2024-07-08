@@ -29,15 +29,16 @@ const FeaturedAds = () => {
               <p className={styles.adLocation}>{house.location}</p>
               
               <div className={styles.adDetails}>
-                <span className={styles.adDetail}>{house.bedrooms} bed</span>
-                <span className={styles.adDetail}>{house.bathrooms} bath</span>
-                <span className={styles.adDetail}>{house.area} sqft</span>
+                <span className={styles.adDetail}>{house.bedrooms} beds</span>
+                <span className={styles.adDetail}>{house.bathrooms} bath rooms</span>
+                
               </div>
               <p className={styles.adAmenities}>
                 {house.amenities.slice(0, 3).join(' • ')}
                 {house.amenities.length > 3 && ' • ...'}
               </p>
               <p className={styles.adAvailable}>Available: {house.available}</p>
+              <p className={styles.adContactNo}>ContactNo: {house.contact}</p>
             </div>
           </Link>
         ))}

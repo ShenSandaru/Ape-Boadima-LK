@@ -30,7 +30,7 @@ export default function Home() {
 
   <Link href="/post-ad" className={`${styles.card} card bg-blue-100 hover:bg-blue-200`}>
     <h2 className="text-2xl font-semibold mb-2 text-center">Post an Ad</h2>
-    <p className="text-center">Sell your items or offer services.</p>
+    <p className="text-center"> offer services.</p>
   </Link>
 
   <Link href="/user/signup" className={`${styles.card} card bg-blue-100 hover:bg-blue-200`}>
