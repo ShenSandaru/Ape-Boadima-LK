@@ -40,11 +40,8 @@ const Navbar = () => {
           />
           </Link>
           
-          <div className={styles.logoname}>
-          <h1 className="text-4xl font-bold text-center mb-8 text-gray-50">
-            Apebodima<span className="text-gray-50">.</span>Lk
-        </h1>
-        </div>
+        
+       
         </div>
         
         <div className={styles.desktopMenu}>
