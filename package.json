@@ -1,0 +1,20 @@
+{
+  "name": "next",
+  "version": "1.0.0",
+  "description": "1. This project was created with perplexity.ai\r 2. You can use this AI for this development.\r 3. Before starting, please use the READ.me file in each folder(Frond-end/Back-end).\r 4. (install npm package for front-end directory USE THIS COMMAND>> `npm install`)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1"
+  }
+}
