@@ -34,11 +34,11 @@ const ContactPage = () => {
     <>
       <Head>
         <title>Contact Us | Apebodima</title>
-        <meta name="description" content="Get in touch with Apebodima - We're here to help!" />
+        <meta name="description" content="Get in touch with Apebodima - We&apos;re here to help!" />
       </Head>
       <div className={styles.container}>
         <h1 className={styles.title}>Get in Touch</h1>
-        <p className={styles.subtitle}>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        <p className={styles.subtitle}>We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.</p>
         {submitMessage && (
           <div className={styles.successMessage}>
             {submitMessage}

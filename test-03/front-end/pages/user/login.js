@@ -100,7 +100,7 @@ const LoginPage = () => {
               </div>
               <div className={styles.dividerText}>
                 <span className={styles.dividerTextInner}>
-                  Don't have an account?
+                  Don&apos;t have an account?
                 </span>
               </div>
             </div>

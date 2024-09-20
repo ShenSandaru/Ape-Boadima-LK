@@ -23,14 +23,14 @@ const AboutPage = () => {
           <div className={styles.textContainer}>
             <h2>Our Mission</h2>
             <p>
-              At apebodima.lk, our mission is to revolutionize the way people find and secure boarding accommodations. We believe that everyone deserves access to safe, comfortable, and affordable housing options, whether you're a student, a young professional, or simply in need of temporary lodging.
+              At apebodima.lk, our mission is to revolutionize the way people find and secure boarding accommodations. We believe that everyone deserves access to safe, comfortable, and affordable housing options, whether you&apos;re a student, a young professional, or simply in need of temporary lodging.
             </p>
           </div>
         </section>
         <section className={styles.section}>
           <h2>Our Story</h2>
           <p>
-            We recognized the need for a user-friendly platform that could simplify the process of finding reliable boarding houses, and we've dedicated ourselves to creating a trusted network of properties across the country.
+            We recognized the need for a user-friendly platform that could simplify the process of finding reliable boarding houses, and we&apos;ve dedicated ourselves to creating a trusted network of properties across the country.
           </p>
         </section>
         <section className={styles.section}>
