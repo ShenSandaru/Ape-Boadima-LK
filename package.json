@@ -10,11 +10,11 @@
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
+    "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.8.0",
-    "mongoose": "^8.5.1"
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.1"
   }
 }
